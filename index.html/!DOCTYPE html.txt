@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Binance Trading AI Bot</title>
+</head>
+<body>
+    <h1>Welcome to my Crypto Trading App!</h1>
+    <script src="app.js"></script>
+</body>
+</html>

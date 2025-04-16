@@ -1,0 +1,90 @@
+{
+  "emulators": {
+    "ui": {
+      "enabled": true,
+      "host": "127.0.0.1",
+      "port": 6060
+    },
+    "functions": {
+      "host": "127.0.0.1",
+      "port": 20003,
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    },
+    "firestore": {
+      "host": "127.0.0.1",
+      "port": 20001,
+      "rules": "firestore.rules"
+    },
+    "database": {
+      "host": "127.0.0.1",
+      "port": 20002
+    },
+    "auth": {
+      "host": "127.0.0.1",
+      "port": 20004
+    },
+    "hosting": {
+      "port": 20005,
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    "pubsub": {
+      "host": "127.0.0.1",
+      "port": 8089
+    },
+    "storage": {
+      "host": "127.0.0.1",
+      "port": 9199,
+      "rules": "storage.rules"
+    }
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    }
+  ],
+  "storage": {
+    "rules": "storage.rules"
+  }
+}

@@ -1,0 +1,12 @@
+specVersion: "v1"
+serviceId: "Binance_Trading_ AI_ Bot"
+location: "europe-west9"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "binance_trading_ ai_ bot-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]
