@@ -1,0 +1,4 @@
+Title: What is Ethereum (ETH)?
+Keywords: ethereum, eth, smart contracts, altcoin, what is eth, ether
+
+Ethereum is a decentralized, open-source blockchain with smart contract functionality. Ether (ETH) is the native cryptocurrency of the platform, used to pay for transaction fees (gas) and computational services. Conceived in 2013 by Vitalik Buterin, Ethereum allows developers to build and deploy decentralized applications (dApps). It's a foundational technology for much of the DeFi (Decentralized Finance) and NFT (Non-Fungible Token) space. Unlike Bitcoin, which is primarily seen as a store of value and a peer-to-peer electronic cash system, Ethereum is often described as a 'world computer' due to its programmability. This information is for educational purposes only and should not be considered financial advice.

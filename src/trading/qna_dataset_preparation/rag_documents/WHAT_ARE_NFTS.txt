@@ -1,0 +1,4 @@
+Title: What are NFTs (Non-Fungible Tokens)?
+Keywords: nft, nfts, non-fungible token, digital collectibles, blockchain art, crypto art
+
+A Non-Fungible Token (NFT) is a unique type of cryptographic token that represents ownership of a specific digital or physical asset. Unlike cryptocurrencies like Bitcoin or Ethereum (which are fungible, meaning one unit is interchangeable with another), each NFT is distinct and not interchangeable. NFTs are recorded on a blockchain (most commonly Ethereum, but also others like Solana or Polygon) which provides a public and verifiable ledger of ownership and transaction history. They can represent digital art, collectibles, virtual land, in-game items, event tickets, and more. This information is for educational purposes only.

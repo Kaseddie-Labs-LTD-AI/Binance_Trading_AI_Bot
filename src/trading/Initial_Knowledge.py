@@ -1,0 +1,144 @@
+# Intial_Knowledge.py
+# (or create_knowledge_snippets.py if you prefer this name)
+
+import json
+import os
+
+# --- Define Your Knowledge Snippets ---
+# Each snippet is a dictionary with:
+# - topic_id: A unique identifier for the topic (use uppercase and underscores, e.g., "WHAT_IS_ETHEREUM").
+# - title: A user-friendly title for the topic (e.g., "What is Ethereum (ETH)?").
+# - keywords: A list of relevant keywords users might search for.
+# - content: The core information/explanation for the topic.
+#   IMPORTANT: For any financial or trading information, include a disclaimer.
+
+knowledge_snippets = [
+    {
+        "topic_id": "WHAT_IS_BITCOIN",
+        "title": "What is Bitcoin (BTC)?",
+        "keywords": ["bitcoin", "what is btc", "btc explanation", "cryptocurrency", "digital currency"],
+        "content": "Bitcoin (BTC) is a decentralized digital currency, created in 2009 by an unknown person or group using the name Satoshi Nakamoto. It operates on a peer-to-peer network, meaning transactions occur directly between users without an intermediary like a bank. Transactions are verified by network nodes through cryptography and recorded in a public, distributed ledger called a blockchain. Bitcoin is known for its limited supply, which is capped at 21 million coins, contributing to its potential as a store of value. This information is for educational purposes only and should not be considered financial advice."
+    },
+    {
+        "topic_id": "APP_STOP_LOSS_ORDER",
+        "title": "How to Use Stop-Loss Orders in This App",
+        "keywords": ["stop-loss", "set stop loss", "risk management", "order type", "limit losses"],
+        "content": "A stop-loss order in our app is a risk management tool designed to help protect your investments. You can set a specific price (the 'stop price') for a cryptocurrency you hold. If the market price of that cryptocurrency drops to your stop price, the app will automatically attempt to place a market sell order to limit your potential losses. You can find the stop-loss option on the trading screen for each asset when placing a new order or for an existing open position. Please be aware that during periods of high market volatility, execution at the exact stop price is not guaranteed, and stop-loss orders may be subject to slippage. Using this feature is not financial advice, and you should understand the risks involved."
+    },
+    {
+        "topic_id": "WHAT_IS_BLOCKCHAIN",
+        "title": "What is a Blockchain?",
+        "keywords": ["blockchain", "distributed ledger technology", "dlt", "how blockchain works", "decentralized ledger"],
+        "content": "A blockchain is a decentralized, distributed, and often public digital ledger consisting of a growing list of records, called 'blocks,' that are securely linked together using cryptography. Each block typically contains a cryptographic hash of the previous block, a timestamp, and transaction data. This design makes blockchains resistant to modification of their data because once recorded, the data in any given block cannot be altered retroactively without altering all subsequent blocks, which requires the consensus of the network majority. This technology is the foundation of most cryptocurrencies and ensures transparency and security."
+    },
+    {
+        "topic_id": "APP_VIEW_MARKET_ANALYSIS",
+        "title": "How to View Market Analysis in the App",
+        "keywords": ["market analysis", "charts", "trading view", "technical indicators", "app feature", "crypto charts"],
+        "content": "To view real-time market analysis and interactive charts in our app, please navigate to the 'Markets' or 'Trade' section from the main menu. Once there, select the cryptocurrency pair you are interested in (e.g., BTC/USD). You will then be presented with a detailed charting interface showing price history, trading volume, and various tools. You can apply a range of technical indicators, draw trendlines, and customize the chart view to suit your analysis style. Our AI-powered insights and sentiment analysis for that specific asset will also typically be displayed on this screen or in a dedicated 'Insights' tab to further assist your decision-making process."
+    },
+    {
+        "topic_id": "CRYPTO_VOLATILITY_EXPLAINED",
+        "title": "Understanding Cryptocurrency Volatility",
+        "keywords": ["volatility", "price swings", "risk", "market fluctuations", "crypto risk"],
+        "content": "Volatility in the context of cryptocurrency refers to the degree of variation of a trading price series over time. It is a measure of how much and how quickly the price of a cryptocurrency can change. High volatility means that an asset's price can change dramatically over a short time period, in either direction. Cryptocurrencies are generally known for being highly volatile compared to traditional financial assets like stocks or bonds. This high volatility can present opportunities for significant profit but also carries substantial risks of loss. It's very important for users to understand these risks and manage their investments accordingly. This information is for educational purposes and is not financial advice."
+    },
+    {
+        "topic_id": "WHAT_IS_ETHEREUM",
+        "title": "What is Ethereum (ETH)?",
+        "keywords": ["ethereum", "eth", "smart contracts", "altcoin", "what is eth", "ether"],
+        "content": "Ethereum is a decentralized, open-source blockchain with smart contract functionality. Ether (ETH) is the native cryptocurrency of the platform, used to pay for transaction fees (gas) and computational services. Conceived in 2013 by Vitalik Buterin, Ethereum allows developers to build and deploy decentralized applications (dApps). It's a foundational technology for much of the DeFi (Decentralized Finance) and NFT (Non-Fungible Token) space. Unlike Bitcoin, which is primarily seen as a store of value and a peer-to-peer electronic cash system, Ethereum is often described as a 'world computer' due to its programmability. This information is for educational purposes only and should not be considered financial advice."
+    },
+    {
+        "topic_id": "WHAT_ARE_NFTS",
+        "title": "What are NFTs (Non-Fungible Tokens)?",
+        "keywords": ["nft", "nfts", "non-fungible token", "digital collectibles", "blockchain art", "crypto art"],
+        "content": "A Non-Fungible Token (NFT) is a unique type of cryptographic token that represents ownership of a specific digital or physical asset. Unlike cryptocurrencies like Bitcoin or Ethereum (which are fungible, meaning one unit is interchangeable with another), each NFT is distinct and not interchangeable. NFTs are recorded on a blockchain (most commonly Ethereum, but also others like Solana or Polygon) which provides a public and verifiable ledger of ownership and transaction history. They can represent digital art, collectibles, virtual land, in-game items, event tickets, and more. This information is for educational purposes only."
+    },
+    {
+        "topic_id": "APP_HOW_TO_DEPOSIT", # Customize content for your app
+        "title": "How to Deposit Funds into Your App Account",
+        "keywords": ["deposit", "add funds", "fund account", "transfer crypto", "app deposit", "how to send crypto"],
+        "content": "To deposit funds into your app account, first log in and navigate to the 'Wallet' or 'Funding' section. Select the 'Deposit' option. You will then need to choose the specific cryptocurrency you wish to deposit (e.g., BTC, ETH, USDT). The app will generate a unique deposit address for that cryptocurrency on the selected network (e.g., Bitcoin network, Ethereum ERC-20 network). **Crucially, ensure you select the correct network that matches the network of your sending wallet, as sending to the wrong network can result in permanent loss of funds.** For some cryptocurrencies (like XRP, XLM, EOS), a destination tag or memo may also be required; make sure to include this if provided. Carefully copy the deposit address (and memo/tag if applicable) and use it in your external wallet or exchange to initiate the transfer. Deposits typically require a certain number of network confirmations before the funds are credited to your app wallet; this time can vary depending on network congestion. Always double-check addresses and network selections before sending. This information is for guidance only."
+    },
+    {
+        "topic_id": "WHAT_IS_RSI",
+        "title": "What is the RSI (Relative Strength Index)?",
+        "keywords": ["rsi", "relative strength index", "technical indicator", "trading indicator", "overbought", "oversold"],
+        "content": "The Relative Strength Index (RSI) is a momentum oscillator used in technical analysis that measures the speed and change of price movements. The RSI oscillates between zero and 100. Traditionally, the RSI is considered overbought when above 70 and oversold when below 30. These levels can signal potential price reversals or pullbacks. However, RSI can also sustain overbought or oversold conditions for extended periods during strong trends. It's often used in conjunction with other indicators and analysis techniques. This information is for educational purposes and not financial advice."
+    },
+    {
+        "topic_id": "WHAT_IS_MACD",
+        "title": "What is MACD (Moving Average Convergence Divergence)?",
+        "keywords": ["macd", "moving average convergence divergence", "technical indicator", "trading signal", "trend indicator"],
+        "content": "The Moving Average Convergence Divergence (MACD) is a trend-following momentum indicator that shows the relationship between two exponential moving averages (EMAs) of a security’s price. The MACD line is typically calculated by subtracting the 26-period EMA from the 12-period EMA. A nine-day EMA of the MACD, called the 'signal line,' is then plotted on top of the MACD line, which can function as a trigger for buy and sell signals. Traders may look for signal line crossovers, centerline crossovers, and divergences to generate signals. The MACD also has a histogram that shows the distance between the MACD line and the signal line. This information is for educational purposes and not financial advice."
+    },
+    {
+        "topic_id": "WHAT_ARE_BOLLINGER_BANDS",
+        "title": "What are Bollinger Bands?",
+        "keywords": ["bollinger bands", "bbands", "technical indicator", "volatility indicator", "trading bands"],
+        "content": "Bollinger Bands are a type of statistical chart characterizing the prices and volatility over time of a financial instrument or commodity. They consist of a middle band being an N-period simple moving average (SMA), an upper band at K times an N-period standard deviation above the middle band, and a lower band at K times an N-period standard deviation below the middle band. Typically, N is set to 20 and K is set to 2. The bands widen when volatility increases and narrow when volatility decreases. Prices are considered high when they touch the upper band and low when they touch the lower band, but these are not direct trading signals on their own. This information is for educational purposes and not financial advice."
+    },
+    {
+        "topic_id": "CRYPTO_SECURITY_TIPS", # Customize with your app's specific advice
+        "title": "Basic Cryptocurrency Security Tips",
+        "keywords": ["crypto security", "secure wallet", "protect crypto", "avoid scams", "2fa", "phishing", "private keys"],
+        "content": "Protecting your cryptocurrency is crucial. Here are some basic security tips: 1. Use strong, unique passwords for all your exchange and wallet accounts, and enable Two-Factor Authentication (2FA) whenever possible, preferably using an authenticator app rather than SMS. 2. Be extremely wary of phishing scams: double-check website URLs, be suspicious of unsolicited emails or messages asking for your private keys or login details. Never share your private keys or seed phrases with anyone. 3. For significant amounts of crypto, consider using a hardware wallet (cold storage) which keeps your private keys offline and secure from online threats. 4. Keep your software (wallets, operating system, browser) updated to protect against known vulnerabilities. 5. Be cautious about public Wi-Fi when accessing your crypto accounts; consider using a VPN. 6. Understand that cryptocurrency transactions are generally irreversible. Always double-check addresses before sending funds. This information is for educational purposes and is not exhaustive security advice."
+    },
+    {
+        "topic_id": "WHAT_ARE_GAS_FEES",
+        "title": "What are Gas Fees in Cryptocurrency?",
+        "keywords": ["gas fees", "transaction fees", "ethereum gas", "blockchain fees", "gwei", "network fees"],
+        "content": "Gas fees are transaction fees paid by users to compensate for the computing energy required to process and validate transactions on a blockchain, particularly on networks like Ethereum. 'Gas' refers to the unit that measures the amount of computational effort required to execute specific operations. The fee itself is typically paid in the native cryptocurrency of that blockchain (e.g., Ether for Ethereum). Gas prices can fluctuate based on network demand; higher demand usually leads to higher gas fees as users compete for their transactions to be included in the next block. Users can often set a gas limit (maximum gas they're willing to consume) and a gas price (price per unit of gas) for their transactions. This information is for educational purposes only."
+    },
+    # --- NEWLY ADDED SNIPPETS ---
+    {
+        "topic_id": "WHAT_IS_SOLANA",
+        "title": "What is Solana (SOL)?",
+        "keywords": ["solana", "sol", "high performance blockchain", "proof of history", "altcoin"],
+        "content": "Solana is a high-performance blockchain designed for speed and scalability, supporting decentralized applications (dApps) and marketplaces. It utilizes a unique consensus mechanism called Proof of History (PoH) in conjunction with Proof of Stake (PoS) to achieve high transaction throughput and low latency. SOL is the native cryptocurrency of the Solana network, used for paying transaction fees and for staking. Solana aims to provide a fast, secure, and scalable infrastructure for the next generation of decentralized services. This information is for educational purposes only and should not be considered financial advice."
+    },
+    {
+        "topic_id": "WHAT_IS_LIMIT_ORDER",
+        "title": "What is a Limit Order?",
+        "keywords": ["limit order", "trading order", "order type", "specific price", "buy limit", "sell limit"],
+        "content": "A limit order is an order to buy or sell a cryptocurrency at a specific price or better. A buy limit order can only be executed at the limit price or lower, and a sell limit order can only be executed at the limit price or higher. Unlike market orders, which execute immediately at the best available current price, limit orders are not guaranteed to execute. They will only fill if the market price reaches your specified limit price. Limit orders give traders more control over the execution price but carry the risk that the order may not be filled if the market doesn't reach the desired price level. This information is for educational purposes and not financial advice."
+    },
+    {
+        "topic_id": "WHAT_IS_MARKET_ORDER",
+        "title": "What is a Market Order?",
+        "keywords": ["market order", "trading order", "order type", "immediate execution", "current price"],
+        "content": "A market order is an order to buy or sell a cryptocurrency immediately at the best available current price in the market. When you place a market order, you are prioritizing speed of execution over a specific price. This means your order will almost certainly be filled, but the price at which it's filled might be slightly different from the last traded price you saw, especially in volatile markets (this difference is known as slippage). Market orders are often used by traders who want to get in or out of a position quickly. This information is for educational purposes and not financial advice."
+    },
+    {
+        "topic_id": "APP_TRADING_FEES_EXPLAINED", # Customize content for your app
+        "title": "Understanding Trading Fees on Our Platform",
+        "keywords": ["trading fees", "fees", "commission", "app fees", "transaction cost"],
+        "content": "Our platform charges trading fees for executing buy and sell orders. These fees are typically a small percentage of the total order value and can vary based on your trading volume over a certain period or other factors. You can find a detailed breakdown of our current fee structure by navigating to the 'Account' section and then selecting 'Fee Schedule' or 'Trading Fees'. We aim to keep our fees competitive and transparent. Please review the fee schedule before trading to understand the costs involved. This information is for guidance only."
+    },
+    {
+        "topic_id": "APP_TRANSACTION_HISTORY", # Customize content for your app
+        "title": "How to Check Your Transaction History",
+        "keywords": ["transaction history", "trade history", "order history", "past trades", "app records"],
+        "content": "To view your transaction history, including past trades, deposits, and withdrawals, please log in to your account and navigate to the 'Orders' or 'History' section. You will typically find sub-sections for 'Trade History,' 'Order History,' 'Deposit History,' and 'Withdrawal History.' You can usually filter these records by date range, cryptocurrency pair, or transaction type to find specific information. This allows you to keep track of all your account activities."
+    }
+]
+
+output_filename = 'knowledge_base_snippets.json'
+output_directory = 'qna_dataset_preparation' # This script will save the JSON in this subdirectory
+
+# Ensure the output directory exists
+os.makedirs(output_directory, exist_ok=True) 
+
+# Construct the full path to the output file
+full_output_path = os.path.join(output_directory, output_filename)
+
+try:
+    # Write the knowledge_snippets list to the JSON file
+    with open(full_output_path, 'w', encoding='utf-8') as f:
+        json.dump(knowledge_snippets, f, indent=4) # indent=4 makes the JSON file human-readable
+    print(f"Successfully created/updated '{full_output_path}' with {len(knowledge_snippets)} knowledge snippets.")
+    print("You can now run 'snippets_to_rag_docs.py' to convert these snippets into individual RAG documents.")
+except Exception as e:
+    print(f"An error occurred while creating/updating '{full_output_path}': {e}")
+

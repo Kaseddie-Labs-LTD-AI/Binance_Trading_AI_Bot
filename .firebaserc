@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "binance-trading-ai-bot"
-  }
+    "default": "binance-trading-ai-bot",
+    "staging_trading_ai_bot": "staging-binance-trading-ai-bot"
+  },
+  "targets": {},
+  "etags": {}
 }

@@ -1,0 +1,6 @@
+import firebase_admin
+from firebase_admin import credentials
+
+# Replace with actual path to Firebase JSON key
+cred = credentials.Certificate("firebase_credentials.json")
+firebase_admin.initialize_app(cred)

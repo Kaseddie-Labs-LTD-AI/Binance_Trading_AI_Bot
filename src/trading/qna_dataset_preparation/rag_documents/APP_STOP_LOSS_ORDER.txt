@@ -1,0 +1,4 @@
+Title: How to Use Stop-Loss Orders in This App
+Keywords: stop-loss, set stop loss, risk management, order type, limit losses
+
+A stop-loss order in our app is a risk management tool designed to help protect your investments. You can set a specific price (the 'stop price') for a cryptocurrency you hold. If the market price of that cryptocurrency drops to your stop price, the app will automatically attempt to place a market sell order to limit your potential losses. You can find the stop-loss option on the trading screen for each asset when placing a new order or for an existing open position. Please be aware that during periods of high market volatility, execution at the exact stop price is not guaranteed, and stop-loss orders may be subject to slippage. Using this feature is not financial advice, and you should understand the risks involved.

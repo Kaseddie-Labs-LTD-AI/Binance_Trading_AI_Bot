@@ -1,0 +1,13 @@
+import requests
+
+api_key = "AIzaSyAVN_9HvulVnUJkwu-6DAjkok39iZR51lI"
+url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
+
+headers = {"Content-Type": "application/json"}
+data = {
+    "contents": [{"parts": [{"text": "Explain how AI works"}]}]
+}
+
+response = requests.post(url, headers=headers, json=data)
+
+print(response.json())  # AI-generated response

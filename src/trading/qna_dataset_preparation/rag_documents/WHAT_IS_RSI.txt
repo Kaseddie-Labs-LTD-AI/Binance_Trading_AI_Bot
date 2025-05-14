@@ -1,0 +1,4 @@
+Title: What is the RSI (Relative Strength Index)?
+Keywords: rsi, relative strength index, technical indicator, trading indicator, overbought, oversold
+
+The Relative Strength Index (RSI) is a momentum oscillator used in technical analysis that measures the speed and change of price movements. The RSI oscillates between zero and 100. Traditionally, the RSI is considered overbought when above 70 and oversold when below 30. These levels can signal potential price reversals or pullbacks. However, RSI can also sustain overbought or oversold conditions for extended periods during strong trends. It's often used in conjunction with other indicators and analysis techniques. This information is for educational purposes and not financial advice.

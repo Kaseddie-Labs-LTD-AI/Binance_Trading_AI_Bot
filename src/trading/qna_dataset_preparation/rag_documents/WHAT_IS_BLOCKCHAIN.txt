@@ -1,0 +1,4 @@
+Title: What is a Blockchain?
+Keywords: blockchain, distributed ledger technology, dlt, how blockchain works, decentralized ledger
+
+A blockchain is a decentralized, distributed, and often public digital ledger consisting of a growing list of records, called 'blocks,' that are securely linked together using cryptography. Each block typically contains a cryptographic hash of the previous block, a timestamp, and transaction data. This design makes blockchains resistant to modification of their data because once recorded, the data in any given block cannot be altered retroactively without altering all subsequent blocks, which requires the consensus of the network majority. This technology is the foundation of most cryptocurrencies and ensures transparency and security.

@@ -1,0 +1,4 @@
+Title: What is Bitcoin (BTC)?
+Keywords: bitcoin, what is btc, btc explanation, cryptocurrency, digital currency
+
+Bitcoin (BTC) is a decentralized digital currency, created in 2009 by an unknown person or group using the name Satoshi Nakamoto. It operates on a peer-to-peer network, meaning transactions occur directly between users without an intermediary like a bank. Transactions are verified by network nodes through cryptography and recorded in a public, distributed ledger called a blockchain. Bitcoin is known for its limited supply, which is capped at 21 million coins, contributing to its potential as a store of value. This information is for educational purposes only and should not be considered financial advice.

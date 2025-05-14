@@ -1,0 +1,4 @@
+Title: Understanding Trading Fees on Our Platform
+Keywords: trading fees, fees, commission, app fees, transaction cost
+
+Our platform charges trading fees for executing buy and sell orders. These fees are typically a small percentage of the total order value and can vary based on your trading volume over a certain period or other factors. You can find a detailed breakdown of our current fee structure by navigating to the 'Account' section and then selecting 'Fee Schedule' or 'Trading Fees'. We aim to keep our fees competitive and transparent. Please review the fee schedule before trading to understand the costs involved. This information is for guidance only.

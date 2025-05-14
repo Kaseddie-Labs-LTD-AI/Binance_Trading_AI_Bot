@@ -1,0 +1,4 @@
+Title: What is a Limit Order?
+Keywords: limit order, trading order, order type, specific price, buy limit, sell limit
+
+A limit order is an order to buy or sell a cryptocurrency at a specific price or better. A buy limit order can only be executed at the limit price or lower, and a sell limit order can only be executed at the limit price or higher. Unlike market orders, which execute immediately at the best available current price, limit orders are not guaranteed to execute. They will only fill if the market price reaches your specified limit price. Limit orders give traders more control over the execution price but carry the risk that the order may not be filled if the market doesn't reach the desired price level. This information is for educational purposes and not financial advice.

@@ -1,2 +1,16 @@
-node_modules/
+# Virtual environment
+venv/
+__pycache__/
+
+# Bytecode files
+*.pyc
+*.pyo
+*.pyd
+
+# Logs and temporary files
+*.log
 *.local
+
+# IDE settings
+.vscode/
+.idea/

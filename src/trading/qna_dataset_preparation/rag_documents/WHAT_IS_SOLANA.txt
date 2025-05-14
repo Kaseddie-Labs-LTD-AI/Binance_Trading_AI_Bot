@@ -1,0 +1,4 @@
+Title: What is Solana (SOL)?
+Keywords: solana, sol, high performance blockchain, proof of history, altcoin
+
+Solana is a high-performance blockchain designed for speed and scalability, supporting decentralized applications (dApps) and marketplaces. It utilizes a unique consensus mechanism called Proof of History (PoH) in conjunction with Proof of Stake (PoS) to achieve high transaction throughput and low latency. SOL is the native cryptocurrency of the Solana network, used for paying transaction fees and for staking. Solana aims to provide a fast, secure, and scalable infrastructure for the next generation of decentralized services. This information is for educational purposes only and should not be considered financial advice.

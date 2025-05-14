@@ -1,0 +1,4 @@
+Title: How to Check Your Transaction History
+Keywords: transaction history, trade history, order history, past trades, app records
+
+To view your transaction history, including past trades, deposits, and withdrawals, please log in to your account and navigate to the 'Orders' or 'History' section. You will typically find sub-sections for 'Trade History,' 'Order History,' 'Deposit History,' and 'Withdrawal History.' You can usually filter these records by date range, cryptocurrency pair, or transaction type to find specific information. This allows you to keep track of all your account activities.

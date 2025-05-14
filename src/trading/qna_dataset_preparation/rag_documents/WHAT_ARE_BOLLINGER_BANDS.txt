@@ -1,0 +1,4 @@
+Title: What are Bollinger Bands?
+Keywords: bollinger bands, bbands, technical indicator, volatility indicator, trading bands
+
+Bollinger Bands are a type of statistical chart characterizing the prices and volatility over time of a financial instrument or commodity. They consist of a middle band being an N-period simple moving average (SMA), an upper band at K times an N-period standard deviation above the middle band, and a lower band at K times an N-period standard deviation below the middle band. Typically, N is set to 20 and K is set to 2. The bands widen when volatility increases and narrow when volatility decreases. Prices are considered high when they touch the upper band and low when they touch the lower band, but these are not direct trading signals on their own. This information is for educational purposes and not financial advice.

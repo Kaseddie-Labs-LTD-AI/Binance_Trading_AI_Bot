@@ -1,0 +1,4 @@
+Title: What is a Market Order?
+Keywords: market order, trading order, order type, immediate execution, current price
+
+A market order is an order to buy or sell a cryptocurrency immediately at the best available current price in the market. When you place a market order, you are prioritizing speed of execution over a specific price. This means your order will almost certainly be filled, but the price at which it's filled might be slightly different from the last traded price you saw, especially in volatile markets (this difference is known as slippage). Market orders are often used by traders who want to get in or out of a position quickly. This information is for educational purposes and not financial advice.

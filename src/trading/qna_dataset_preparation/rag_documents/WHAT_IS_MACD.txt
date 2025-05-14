@@ -1,0 +1,4 @@
+Title: What is MACD (Moving Average Convergence Divergence)?
+Keywords: macd, moving average convergence divergence, technical indicator, trading signal, trend indicator
+
+The Moving Average Convergence Divergence (MACD) is a trend-following momentum indicator that shows the relationship between two exponential moving averages (EMAs) of a security’s price. The MACD line is typically calculated by subtracting the 26-period EMA from the 12-period EMA. A nine-day EMA of the MACD, called the 'signal line,' is then plotted on top of the MACD line, which can function as a trigger for buy and sell signals. Traders may look for signal line crossovers, centerline crossovers, and divergences to generate signals. The MACD also has a histogram that shows the distance between the MACD line and the signal line. This information is for educational purposes and not financial advice.

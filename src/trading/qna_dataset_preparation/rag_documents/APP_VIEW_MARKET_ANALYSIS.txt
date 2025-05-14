@@ -1,0 +1,4 @@
+Title: How to View Market Analysis in the App
+Keywords: market analysis, charts, trading view, technical indicators, app feature, crypto charts
+
+To view real-time market analysis and interactive charts in our app, please navigate to the 'Markets' or 'Trade' section from the main menu. Once there, select the cryptocurrency pair you are interested in (e.g., BTC/USD). You will then be presented with a detailed charting interface showing price history, trading volume, and various tools. You can apply a range of technical indicators, draw trendlines, and customize the chart view to suit your analysis style. Our AI-powered insights and sentiment analysis for that specific asset will also typically be displayed on this screen or in a dedicated 'Insights' tab to further assist your decision-making process.
